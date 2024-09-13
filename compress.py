@@ -1,23 +1,22 @@
-#!/usr/bin/env python3
+#!/usr/bin python3
 
 import os
 import hashlib
 
-def transform_hash (direc):
-    for root,dirs,files in os.walk(direc):
-        for file in files:
-            print(os.path.join(root, file))
-'''
 def makehash(baseDir):
     for entry in os.scandir(baseDir):
         if entry.is_file():
             yield os.path.join(baseDir, entry.name)
         else:
-            yield scanRecurse(entry.path)
+            print("makehash failure, files not available")
+            break
+
+archives = []
   
 for i in makehash('./a_sample_dir'):
     print(i)
 #from PIL import Image
+'''
 '''
 '''
 goal is make a tar script that will first hash
