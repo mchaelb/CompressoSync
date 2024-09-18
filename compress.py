@@ -1,23 +1,13 @@
 #!/usr/bin python3
 
-import os
-import hashlib
-
-def makehash(baseDir):
-    for entry in os.scandir(baseDir):
-        if entry.is_file():
-            yield os.path.join(baseDir, entry.name)
-        else:
-            print("makehash failure, files not available")
-            break
-
-archives = []
-  
-for i in makehash('./a_sample_dir'):
-    print(i)
+import glob
+#import os
+#import hashlib
 #from PIL import Image
-'''
-'''
+
+for file in sorted(glob.glob('./*_sample_dir/**')):
+    print(file)
+
 '''
 goal is make a tar script that will first hash
 image/doc add that hash to a db, compress with xz
