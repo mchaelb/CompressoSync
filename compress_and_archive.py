@@ -8,7 +8,7 @@ import io
 # print(collection_dict)
 
 serial_dict = pickle.dumps(collection_dict)
-with tarfile.TarFile('output1.tar', 'w') as tar:
+with tarfile.TarFile('output.tar', 'w') as tar:
     bytes_io = io.BytesIO(serial_dict)
     # add the serialized dictionary to the tarfile
     tarinfo = tarfile.TarInfo('serial_dict.pkl')
