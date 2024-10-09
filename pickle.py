@@ -1,6 +1,6 @@
 #!/usr/bin python3
 
-from scrape_and_hash import collection_dict
+from hash import collection_dict
 import pickle
 import tarfile
 import io
